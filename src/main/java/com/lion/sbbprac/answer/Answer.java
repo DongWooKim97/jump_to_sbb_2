@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import com.lion.sbbprac.question.Question;
 
+import com.lion.sbbprac.siteuser.SiteUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,4 +29,7 @@ public class Answer {
 
     @ManyToOne
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
 }
