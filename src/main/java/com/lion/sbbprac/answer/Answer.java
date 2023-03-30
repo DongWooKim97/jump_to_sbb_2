@@ -1,16 +1,12 @@
 package com.lion.sbbprac.answer;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 import com.lion.sbbprac.question.Question;
 
 import com.lion.sbbprac.siteuser.SiteUser;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,4 +30,7 @@ public class Answer {
 
     @ManyToOne
     private SiteUser author;
+
+    @ManyToMany
+    private Set<SiteUser> voter;
 }

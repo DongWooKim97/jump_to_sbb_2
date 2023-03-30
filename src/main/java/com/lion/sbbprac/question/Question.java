@@ -2,6 +2,7 @@ package com.lion.sbbprac.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import com.lion.sbbprac.answer.Answer;
 
@@ -34,4 +35,7 @@ public class Question {
 
     @ManyToOne
     private SiteUser author;
+
+    @ManyToMany
+    private Set<SiteUser> voter;
 }
