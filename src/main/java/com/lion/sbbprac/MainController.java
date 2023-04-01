@@ -15,6 +15,13 @@ public class MainController {
         return "welcome to sbb";
     }
 
+    @GetMapping("/home")
+    public String home(){
+
+        return "home";
+    }
+
+
     @GetMapping("/")
     public String root() {
         return "redirect:/question/list";
